@@ -1,0 +1,145 @@
+data
+    s1 db "x = ",0
+    s2 db "y = ", 0
+    s3 db " + ", 0
+    s4 db " - ",   0
+    s5 db " * "   , 0
+    s6 db " / ", 0
+    s7 db " % ", 0
+    s8 db " = ", 0
+    s9 db 13, 10, 0
+    x  dd 0
+    y  dd 0
+    z  dd 0
+code
+    start: push 0x10
+    push offset s1
+    out
+    push 0x21
+    push offset x
+    in
+
+    push 0x10
+    push offset s2
+    out
+    push 0x21
+    push offset y
+    in
+
+    push x
+    push y
+    add
+    pop  z
+    push 0x11
+    push offset x
+    out
+    push 0x10
+    push offset s3
+    out
+    push 0x11
+    push offset y
+    out
+    push 0x10
+    push offset s8
+    out
+    push 0x11
+    push offset z
+    out
+    push 0x10
+    push offset s9
+    out
+
+    push x
+    push y
+    sub
+    pop  z
+    push 0x11
+    push offset x
+    out
+    push 0x10
+    push offset s4
+    out
+    push 0x11
+    push offset y
+    out
+    push 0x10
+    push offset s8
+    out
+    push 0x11
+    push offset z
+    out
+    push 0x10
+    push offset s9
+    out
+
+    push x
+    push y
+    mul
+    pop  z
+    push 0x11
+    push offset x
+    out
+    push 0x10
+    push offset s5
+    out
+    push 0x11
+    push offset y
+    out
+    push 0x10
+    push offset s8
+    out
+    push 0x11
+    push offset z
+    out
+    push 0x10
+    push offset s9
+    out
+
+    push x
+    push y
+    div
+    pop  z
+    push 0x11
+    push offset x
+    out
+    push 0x10
+    push offset s6
+    out
+    push 0x11
+    push offset y
+    out
+    push 0x10
+    push offset s8
+    out
+    push 0x11
+    push offset z
+    out
+    push 0x10
+    push offset s9
+    out
+
+    push x
+    push y
+    mod
+    pop  z
+    push 0x11
+    push offset x
+    out
+    push 0x10
+    push offset s7
+    out
+    push 0x11
+    push offset y
+    out
+    push 0x10
+    push offset s8
+    out
+    push 0x11
+    push offset z
+    out
+    push 0x10
+    push offset s9
+    out
+
+    exit
+end start
