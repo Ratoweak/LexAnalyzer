@@ -40,6 +40,12 @@ vector<Lexem> LexicalAnalyser::getLexems() const
 IdentifierState* LexicalAnalyser::getIdentifierState() const
 {
 	return identifierState;
+
+}
+
+DollarState* LexicalAnalyser::getDollarState() const
+{
+	return dollarState;
 }
 
 DecimalNumberState* LexicalAnalyser::getDecimalNumberState() const

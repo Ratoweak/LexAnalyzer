@@ -17,6 +17,7 @@ public:
 	virtual State* processColon(char c);
 	virtual State* processSeparator(char c);
 	virtual State* processCharacter(char c);
+	virtual State* processDollar(char c);
 	virtual void finish() = 0;
 };
 

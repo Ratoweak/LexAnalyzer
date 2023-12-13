@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="dollar_state.cpp" />
     <ClCompile Include="lexem.cpp" />
     <ClCompile Include="lexical-analyser.cpp" />
     <ClCompile Include="llpt-assembler-example.cpp" />
@@ -142,6 +143,7 @@
     <ClCompile Include="state.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="dollar_state.h" />
     <ClInclude Include="lexem.h" />
     <ClInclude Include="lexical-analyser.h" />
     <ClInclude Include="parser.h" />

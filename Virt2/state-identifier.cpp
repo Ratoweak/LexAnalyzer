@@ -34,6 +34,12 @@ State* IdentifierState::processSeparator(char c)
 	return lexicalAnalyser->getSimpleSeparatorState();
 }
 
+/*State* IdentifierState::processDollar(char c)
+{
+	lexicalAnalyser->addCurrentLexem(LexemType::IDENTIFIER);
+	return lexicalAnalyser->getDollarState();
+}*/
+
 void IdentifierState::finish()
 {
 	lexicalAnalyser->addCurrentLexem(LexemType::IDENTIFIER);

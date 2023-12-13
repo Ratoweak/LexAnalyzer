@@ -12,6 +12,11 @@ State* State::processLetter(char c)
 	throw LexicalAnalyserError();
 }
 
+State* State::processDollar(char c)
+{
+	throw LexicalAnalyserError();
+}
+
 State* State::processDigit(char c)
 {
 	throw LexicalAnalyserError();

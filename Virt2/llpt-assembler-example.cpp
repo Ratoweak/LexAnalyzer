@@ -17,7 +17,8 @@ int main()
         { LexemType::HEXADECIMAL_NUMBER, "HEX_NUM" },
         { LexemType::STRING,             "STR"     },
         { LexemType::COMMA_SEPARATOR,    "COMMA"   },
-        { LexemType::COLON_SEPARATOR,    "COLON"   }
+        { LexemType::COLON_SEPARATOR,    "COLON"   },
+        { LexemType::DOLLAR_SIGN,        "DOLLAR"  }
     };
     ifstream fin("program.txt");
     if (fin.is_open())

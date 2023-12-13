@@ -16,6 +16,7 @@ using namespace std;
 #include "state-separator-special.h"
 #include "state-string.h"
 #include "state-string-end.h"
+#include "dollar_state.h"
 
 class LexicalAnalyser
 {
@@ -29,6 +30,7 @@ class LexicalAnalyser
 	SimpleSeparatorState*   simpleSeparatorState;
 	StringState*            stringState;
 	EndStringState*         endStringState;
+	DollarState*            dollarState;
 public:
 	LexicalAnalyser();
 	void addCharacter(char c);
@@ -36,6 +38,7 @@ public:
 	string getCurrentLexem() const;
 	vector<Lexem> getLexems() const;
 	IdentifierState*        getIdentifierState()        const;
+	DollarState*            getDollarState()            const;
 	DecimalNumberState*     getDecimalNumberState()     const;
 	HexadecimalNumberState* getHexadecimalNumberState() const;
 	ColonSeparatorState*    getColonSeparatorState()    const;
